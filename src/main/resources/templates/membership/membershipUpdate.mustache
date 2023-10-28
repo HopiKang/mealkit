@@ -1,0 +1,15 @@
+<!--loginHeader 와 연결-->
+{{>login/loginHeader}}
+{{#userUpdate}}
+<form action="/login/membership/update" method="post">
+    <div class="container mt-1 mb-1 mx-auto">
+        <input name="nickname" type="text" value="{{nickname}}"><br>
+        <input name="userId" type="text" value="{{userId}}"><br>
+        <input name="userPassword" type="text" value="{{userPassword}}"><br>
+
+        <button type="submit"><a href="/login/membership/update">수정</a></button><br>
+        <button type="button"><a href="/login">뒤로</a></button>
+    </div>
+{{/userUpdate}}
+<!--loginFooter 와 연결-->
+{{>login/loginFooter}}

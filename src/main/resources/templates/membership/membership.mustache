@@ -1,0 +1,19 @@
+<!--loginHeader 와 연결-->
+{{>login/loginHeader}}
+<form action="/login/membership/create" method="post">
+    <!--text_container 로그인 아이디, 비밀번호, 로그인버튼 등을 담을 클래스-->
+    <div class="container mt-1 mb-1 mx-auto">
+        <!--        login_name 이름 textarea-->
+        <input id="loginName" type="text" name="nickname" placeholder="이름"><br>
+        <!--        login_id 아이디 textarea-->
+        <input id="loginId" type="text" class="mt-1 mb-1" name="userId" placeholder="아이디"><br>
+        <!--        login_password 비밀번호 textarea-->
+        <input id="loginPassword" type="text" class="mb-1" name="userPassword" placeholder="비밀번호"><br>
+        <input id="loginDate" type="date" class="mb-1" name="createdDate" placeholder="날짜"><br>
+        <!--        login_button 회원가입 버튼-->
+        <button id="loginButton" type="submit">회원가입</button>
+        <button type="button"><a href="/login">뒤로</a></button>
+    </div>
+</form>
+<!--loginFooter 와 연결-->
+{{>login/loginFooter}}

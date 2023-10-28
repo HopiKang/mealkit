@@ -1,0 +1,29 @@
+<!--loginHeader 와 연결-->
+{{>login/loginHeader}}
+<!--text_container 로그인 아이디, 비밀번호, 로그인버튼 등을 담을 클래스-->
+<!--    <div class="container">-->
+<!--        login_id 아이디 textarea-->
+<!--        <input id="loginId" type="text" placeholder="아이디"><br>-->
+<!--        login_id 아이디 textarea-->
+<!--        <input id="loginPassword" type="text" class="mt-1 mb-1" placeholder="비밀번호"><br>-->
+<!--        login_button 로그인버튼-->
+<!--        <button id="loginButton">로그인</button><br>-->
+<!--        <button id="createMembership"><a href="/login/new">회원가입</a></button><br>-->
+<!--        <button id="membershipList"><a href="/login/membershipList">회원목록</a></button>-->
+<!--    </div>-->
+<div class="input-group mb-3">
+    <span class="input-group-text">id</span>
+    <div class="form-floating">
+        <input type="text" class="form-control" id="loginId" placeholder="아이디">
+        <label for="loginId">아이디</label>
+    </div>
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text">password</span>
+    <div class="form-floating">
+        <input type="text" class="form-control" id="loginPassword" placeholder="아이디">
+        <label for="loginPassword">비밀번호</label>
+    </div>
+</div>
+<!--loginFooter 와 연결-->
+{{>login/loginFooter}}

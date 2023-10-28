@@ -1,0 +1,23 @@
+<!--loginHeader 와 연결-->
+{{>login/loginHeader}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Nickname</th>
+        <th scope="col">userId</th>
+        <th scope="col">userPassword</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {{#userUpdate}}
+        <tr>
+            <th>{{nickname}}</th>
+            <th>{{userId}}</th>
+            <th>{{userPassword}}</th>
+            <th><button type="button"><a href="/login/membership/edit">저장</a></button></th>
+        </tr>
+    {{/userUpdate}}
+    </tbody>
+</table>
+<!--loginFooter 와 연결-->
+{{>login/loginFooter}}
