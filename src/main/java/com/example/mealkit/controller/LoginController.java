@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LoginController {
+/*
 
     @Autowired
     private LoginService loginService;
@@ -22,14 +23,12 @@ public class LoginController {
         return "login/login";
     }
 
-
-
     @GetMapping()
     public String logout(HttpServlet request){
         return "";
     }
 
-
+*/
 
 
 }

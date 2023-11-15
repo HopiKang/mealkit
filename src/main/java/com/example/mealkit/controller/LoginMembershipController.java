@@ -16,7 +16,7 @@ import java.util.List;
 @Slf4j
 @Controller
 public class LoginMembershipController {
-
+/*
     @Autowired
     private UserService userService;
 
@@ -25,11 +25,11 @@ public class LoginMembershipController {
         return "/membership/membership";
     }
 
-    /**
+    *//**
      * CreateUsers (생성 Controller)
      * PostMapping
      * User 정보를 생성
-     */
+     *//*
     @PostMapping("/login/membership/create")
     public String CreateUsers(UsersForm dto){
         log.info(dto.toString());
@@ -53,11 +53,11 @@ public class LoginMembershipController {
         return "/membership/membershipUpdate";
     }
 
-    /**
+    *//**
      * UpdateUsers (업데이트 controller)
      * PostMapping
      * UsersForm 에서 정보를 받음
-     * */
+     * *//*
     @PostMapping("/login/membership/update")
     public String UpdateUsers(UsersForm dto){
         log.info(dto.toString());
@@ -69,10 +69,10 @@ public class LoginMembershipController {
     }
 
 
-    /**
+    *//**
      * DeleteUsers (삭제 controller)
      * GetMapping
-     */
+     *//*
 
     @GetMapping("/login/membershipList/{id}/delete")
     public String DeleteUsers(@PathVariable Long id){
@@ -80,16 +80,17 @@ public class LoginMembershipController {
         return "redirect:/login/membershipList";
     }
 
-    /**
+    *//**
      * MembershipList (전체출력 controller)
      * GetMapping
-     * */
+     * *//*
     @GetMapping("/login/membershipList")
     public String MembershipList(Model model){
         List<Users> usersList = userService.findList();
         model.addAttribute("usersList", userService.findList());
         return "/membership/membershipList";
     }
+    */
 
 
 

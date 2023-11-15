@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MealkitController {
-    @GetMapping("/main")
+    /*@GetMapping("/main")
     public String Main(){
         return "/main/mealkit";
     }
@@ -17,4 +17,5 @@ public class MealkitController {
 
         return "";
     }
+    */
 }
