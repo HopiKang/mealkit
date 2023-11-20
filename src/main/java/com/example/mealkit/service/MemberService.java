@@ -1,6 +1,7 @@
 package com.example.mealkit.service;
 
 import com.example.mealkit.dto.MemberDto;
+import com.example.mealkit.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
