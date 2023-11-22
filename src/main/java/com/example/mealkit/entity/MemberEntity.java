@@ -1,5 +1,6 @@
 package com.example.mealkit.entity;
 
+import com.example.mealkit.dto.MemberDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Table(name = "member_table")
 public class MemberEntity {
-    @Id
+    @Id // pk
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -22,4 +23,8 @@ public class MemberEntity {
     @Column(unique = true)
     private String memberName;
 
+    public static MemberEntity toMemberentity(MemberDto memberDto){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setMemberEmail(memberDto.getMemberEmail());
+    }
 }
