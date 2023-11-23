@@ -24,7 +24,17 @@ public class MemberController {
         System.out.println("MemberController.save");
         System.out.println("memberDto = " + memberDto);
         memberService.save(memberDto);
-        return "Home/home";
+        return "login";
+    }
+
+    @PostMapping("/member/login")
+    public String login(@ModelAttribute MemberDto memberDto){
+        MemberDto loginResult = memberService.login(memberDto);
+        if (loginResult != null){
+            return "main";
+        } else {
+            return "login";
+        }
     }
 
 }
