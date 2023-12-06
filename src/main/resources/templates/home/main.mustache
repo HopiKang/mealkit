@@ -5,7 +5,10 @@
     <title>main</title>
 </head>
 <body>
-session 값 : <p></p>
+<p>
+    session 값 : {{#loginEmail}}{{loginEmail}}{{/loginEmail}}
+    {{^loginEmail}}N{{/loginEmail}}
+</p>
 </body>
 </html>
 

@@ -17,7 +17,7 @@ public class MemberController {
 //    회원가입 페이지 출력
     @GetMapping("/member/save")
     public String saveForm(){
-        return "Home/save";
+        return "home/save";
     }
 
     @PostMapping("/member/save")
@@ -25,23 +25,23 @@ public class MemberController {
         System.out.println("MemberController.save");
         System.out.println("memberDto = " + memberDto);
         memberService.save(memberDto);
-        return "Home/login";
+        return "home/login";
     }
 
     @GetMapping("/member/login")
     public String loginForm(){
-        return "Home/login";
+        return "home/login";
     }
 
     @PostMapping("/member/login")
     public String login(@ModelAttribute MemberDto memberDto, HttpSession session){
         MemberDto loginResult = memberService.login(memberDto);
+        System.out.println(loginResult.getMemberEmail());
         if (loginResult != null){
             session.setAttribute("loginEmail", loginResult.getMemberEmail());
-            return "Home/main";
+            return "home/main";
         } else {
-            return "Home/login";
+            return "home/login";
         }
     }
-
 }
