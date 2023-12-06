@@ -25,7 +25,7 @@ public class MemberController {
         System.out.println("MemberController.save");
         System.out.println("memberDto = " + memberDto);
         memberService.save(memberDto);
-        return "login";
+        return "Home/login";
     }
 
     @GetMapping("/member/login")
@@ -38,9 +38,9 @@ public class MemberController {
         MemberDto loginResult = memberService.login(memberDto);
         if (loginResult != null){
             session.setAttribute("loginEmail", loginResult.getMemberEmail());
-            return "main";
+            return "Home/main";
         } else {
-            return "login";
+            return "Home/login";
         }
     }
 
