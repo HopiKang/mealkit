@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>memberEmail</th>
+        <th>memberPassword</th>
+        <th>memberName</th>
+        <th>상세조회</th>
+        <th>삭제</th>
+    </tr>
+    {{#memberList}}
+    <tr>
+        <td>{{memberList.id}}</td>
+        <td>{{memberList.memberEmail}}</td>
+        <td>{{memberList.memberPassword}}</td>
+        <td>{{memberList.memberName}}</td>
+    </tr>
+    <td>
+        <a href="/member/{{memberList.id}}">조회</a>
+    </td>
+    <td>
+        <a href="/member/delete/{{memberList.id}}">삭제</a>
+    </td>
+    {{/memberList}}
+</table>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>memberEmail</th>
+        <th>memberPassword</th>
+        <th>memberName</th>
+    </tr>
+    {{#memberList}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{memberEmail}}</td>
+            <td>{{memberPassword}}</td>
+            <td>{{memberName}}</td>
+        </tr>
+    {{/memberList}}
+</table>
+</div>
+</body>
+</html>
+
